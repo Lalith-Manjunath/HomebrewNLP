@@ -48,7 +48,7 @@ class Model(DataClass):
 
 
 class Dataset(DataClass):
-    file_name: str = "out.tensor"
+    file_name: str = "./data/out.tensor"
     classes: int = 256
     num_workers: int = 4
     pin_memory: bool = False
@@ -56,8 +56,8 @@ class Dataset(DataClass):
 
 
 class WandB(DataClass):
-    project: str = 'gpt'
-    entity: str = 'homebrewnlp'
+    project: str = 'homebrewNLP'
+    entity: str = 'lalith-manjunath'
     model_log_type: typing.Optional[str] = None  # One of "gradients", "parameters", "all", or None
     log_frequency: int = 1000  # log gradients and parameters every N batches
 
